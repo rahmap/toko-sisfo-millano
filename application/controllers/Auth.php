@@ -67,7 +67,7 @@ class Auth extends CI_Controller
                     if ($this->session->has_userdata('checkout_url')) {
                         redirect($this->session->userdata('checkout_url'));
                     } else {
-                          $this->freeM->getSweetAlert('infoPayment', 'Success!', 'Berhasil login, silahkan berbelanja!', 'success');
+                        $this->freeM->getSweetAlert('infoPayment', 'Success!', 'Berhasil login, silahkan berbelanja!', 'success');
                         ($this->session->level == 'Admin' OR $this->session->level == 'Owner') ? redirect('dashboard/admin') : redirect('home');
                         redirect('home');
                     }
